@@ -1,5 +1,5 @@
 /*
-@朋克 1.4 多点淘金 每天三毛。。
+@肥皂 1.4 多点淘金 每天三毛。。
 阅读类的项目还是别并发。。。 重写没测试。不知道行不行
 https://api.gzswin.cn/index/index    token获取链接
 https://api.gezs.cc/archery/index   unionid获取链接
