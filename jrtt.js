@@ -1,9 +1,9 @@
 @@ -12,10 +12,11 @@ V2P重写：
 #今日头条极速版
-1-59/15 6-23 * * *  https://raw.githubusercontent.com/leafxcy/JavaScript/main/jrttjsb.js, tag=今日头条极速版, enabled=true
+1-59/15 6-23 * * *  https://raw.githubusercontent.com/Alxcky/Ym/main/jrtt.js, tag=今日头条极速版, enabled=true
 [rewrite_local]
-luckycat/lite/v1/task/page_data url script-request-header https://raw.githubusercontent.com/leafxcy/JavaScript/main/jrttjsb.js
-luckycat\/lite\/v1\/task\/page_data url script-request-header https://raw.githubusercontent.com/leafxcy/JavaScript/main/jrttjsb.js
+luckycat/lite/v1/task/page_data url script-request-header https://raw.githubusercontent.com/Alxcky/Ym/main/jrtt.js
+luckycat\/lite\/v1\/task\/page_data url script-request-header https://raw.githubusercontent.com/Alxcky/Ym/main/jrtt.js
 [MITM]
 hostname = i.snssdk.com //安卓版
 hostname = api3-normal-lq.toutiaoapi.com //IOS版
