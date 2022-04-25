@@ -1,3 +1,6 @@
+/*
+425解密版
+/*
 const $$ = Envcc('');
 let acckey = $$["isNode"]() ? process["env"]["cdkey"] ? process["env"]["cdkey"] : '' : $$["getdata"]("cdkey") ? $$["getdata"]("cdkey") : '',
     all_msg = '',
