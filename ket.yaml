@@ -1,0 +1,441 @@
+# ==================== 基础配置 ====================
+port: 7890
+socks-port: 7891
+mixed-port: 7893
+allow-lan: false
+mode: rule
+log-level: info
+unified-delay: true
+tcp-concurrent: true
+external-controller: 0.0.0.0:9090
+secret: ""
+ipv6: false
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+# ==================== DNS 配置 ====================
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  use-hosts: true
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 223.5.5.5
+  nameserver:
+    - https://8.8.8.8/dns-query
+    - https://1.1.1.1/dns-query
+  fallback:
+    - https://doh.dns.sb/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 0.0.0.0/8
+      - 10.0.0.0/8
+      - 127.0.0.0/8
+      - 172.16.0.0/12
+      - 192.168.0.0/16
+
+# ==================== 代理节点配置 ====================
+proxies:
+
+  # ========== 免费德国节点 ==========
+  - name: "🇩🇪 免费-德国-10137"
+    type: vless
+    server: 64.57.190.8
+    port: 1883
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  - name: "🇩🇪 免费-德国-10193"
+    type: vless
+    server: 64.57.190.19
+    port: 1883
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  - name: "🇩🇪 免费-德国-8966"
+    type: vless
+    server: 80.239.191.51
+    port: 1883
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  - name: "🇩🇪 免费-德国-9100"
+    type: vless
+    server: 80.239.191.11
+    port: 1883
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  - name: "🇩🇪 免费-德国-10139"
+    type: vless
+    server: 64.57.190.7
+    port: 1883
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  # ========== 免费荷兰节点 ==========
+  - name: "🇳🇱 免费-荷兰-9783"
+    type: vless
+    server: 72.11.129.33
+    port: 1883
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  - name: "🇳🇱 免费-荷兰-9723"
+    type: vless
+    server: 72.11.129.25
+    port: 1883
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  - name: "🇳🇱 免费-荷兰-9784"
+    type: vless
+    server: 72.11.129.30
+    port: 1883
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  - name: "🇳🇱 免费-荷兰-9725"
+    type: vless
+    server: 72.11.129.27
+    port: 1883
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  # ========== 付费节点 ==========
+  - name: "💰 付费-德国-10279"
+    type: vless
+    server: 64.57.190.13
+    port: 1883
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  - name: "💰 付费-美国-7701"
+    type: vless
+    server: 64.57.191.41
+    port: 87
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  - name: "💰 付费-香港-10430"
+    type: vless
+    server: 62.115.250.215
+    port: 1014
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  - name: "💰 付费-日本-5831"
+    type: vless
+    server: 62.115.250.215
+    port: 1015
+    uuid: 37c4698d-8e01-4660-bf95-b2bde5074ccf
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    servername: osxapps.itunes.apple.com
+    reality-opts:
+      public-key: OyGxax1037g3nQrsIW0PtXHik3WI1ikOT2pxm9c7fxw
+      short-id: 6ba85179e30d4fc2
+
+  # ========== Hysteria2 节点 ==========
+  - name: "🚀 H2-俄罗斯-8768"
+    type: hysteria2
+    server: 213.165.60.13
+    port: 34119
+    password: a5c9f030-b683-44e5-85dc-790d2d5a525e
+    sni: lenta.ru
+    skip-cert-verify: true
+    alpn:
+      - h3
+
+  - name: "🚀 H2-俄罗斯-9152"
+    type: hysteria2
+    server: 89.23.113.154
+    port: 37455
+    password: 343ab190-7eb0-427f-817e-49c214775cda
+    sni: lenta.ru
+    skip-cert-verify: true
+    alpn:
+      - h3
+
+# ==================== 代理分组配置 ====================
+proxy-groups:
+
+  # 自动测速组
+  - name: "🚀 自动选择"
+    type: url-test
+    use:
+      - ALL_PROXIES
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    tolerance: 50
+    lazy: true
+
+  # 负载均衡组
+  - name: "⚖️ 负载均衡"
+    type: load-balance
+    use:
+      - ALL_PROXIES
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    strategy: consistent-hashing
+    lazy: true
+
+  # 地区分组
+  - name: "🇩🇪 德国节点"
+    type: select
+    use:
+      - ALL_PROXIES
+    filter: "德国"
+
+  - name: "🇳🇱 荷兰节点"
+    type: select
+    use:
+      - ALL_PROXIES
+    filter: "荷兰"
+
+  - name: "💰 付费节点"
+    type: select
+    use:
+      - ALL_PROXIES
+    filter: "付费"
+
+  - name: "🚀 Hysteria2"
+    type: select
+    use:
+      - ALL_PROXIES
+    filter: "H2"
+
+  # 按用途分组
+  - name: "🎬 流媒体服务"
+    type: select
+    proxies:
+      - "💰 付费节点"
+      - "🇩🇪 德国节点"
+      - "🇳🇱 荷兰节点"
+      - "🚀 自动选择"
+      - DIRECT
+
+  - name: "💬 聊天社交"
+    type: select
+    proxies:
+      - "🚀 自动选择"
+      - "🇩🇪 德国节点"
+      - "🇳🇱 荷兰节点"
+      - DIRECT
+
+  - name: "🔍 搜索学习"
+    type: select
+    proxies:
+      - "🚀 自动选择"
+      - "🇩🇪 德国节点"
+      - DIRECT
+
+  - name: "⚡ 高速下载"
+    type: select
+    proxies:
+      - "🚀 Hysteria2"
+      - "⚖️ 负载均衡"
+      - "🚀 自动选择"
+
+# ==================== 规则配置 ====================
+rules:
+  # 广告屏蔽
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  
+  # 国内直连
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,alipay.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  
+  # Apple 服务直连
+  - DOMAIN-SUFFIX,apple.com,DIRECT
+  - DOMAIN-SUFFIX,icloud.com,DIRECT
+  - DOMAIN-SUFFIX,appstore.com,DIRECT
+  
+  # 流媒体服务
+  - DOMAIN-SUFFIX,netflix.com,🎬 流媒体服务
+  - DOMAIN-SUFFIX,netflix.net,🎬 流媒体服务
+  - DOMAIN-SUFFIX,nflxvideo.net,🎬 流媒体服务
+  - DOMAIN-SUFFIX,nflxext.com,🎬 流媒体服务
+  - DOMAIN-SUFFIX,disneyplus.com,🎬 流媒体服务
+  - DOMAIN-SUFFIX,disney-plus.net,🎬 流媒体服务
+  - DOMAIN-SUFFIX,hotstar.com,🎬 流媒体服务
+  - DOMAIN-SUFFIX,hulu.com,🎬 流媒体服务
+  - DOMAIN-SUFFIX,huluim.com,🎬 流媒体服务
+  
+  # YouTube
+  - DOMAIN-SUFFIX,youtube.com,🎬 流媒体服务
+  - DOMAIN-SUFFIX,youtu.be,🎬 流媒体服务
+  - DOMAIN-SUFFIX,googlevideo.com,🎬 流媒体服务
+  - DOMAIN-SUFFIX,ytimg.com,🎬 流媒体服务
+  
+  # 聊天社交
+  - DOMAIN-SUFFIX,telegram.org,💬 聊天社交
+  - DOMAIN-SUFFIX,t.me,💬 聊天社交
+  - DOMAIN-SUFFIX,tdesktop.com,💬 聊天社交
+  - DOMAIN-SUFFIX,whatsapp.com,💬 聊天社交
+  - DOMAIN-SUFFIX,facebook.com,💬 聊天社交
+  - DOMAIN-SUFFIX,messenger.com,💬 聊天社交
+  - DOMAIN-SUFFIX,twitter.com,💬 聊天社交
+  - DOMAIN-SUFFIX,x.com,💬 聊天社交
+  - DOMAIN-SUFFIX,instagram.com,💬 聊天社交
+  - DOMAIN-SUFFIX,discord.com,💬 聊天社交
+  
+  # 搜索学习
+  - DOMAIN-SUFFIX,google.com,🔍 搜索学习
+  - DOMAIN-SUFFIX,googleapis.com,🔍 搜索学习
+  - DOMAIN-SUFFIX,gstatic.com,🔍 搜索学习
+  - DOMAIN-SUFFIX,googleusercontent.com,🔍 搜索学习
+  - DOMAIN-SUFFIX,wikipedia.org,🔍 搜索学习
+  - DOMAIN-SUFFIX,github.com,🔍 搜索学习
+  - DOMAIN-SUFFIX,githubusercontent.com,🔍 搜索学习
+  - DOMAIN-SUFFIX,stackoverflow.com,🔍 搜索学习
+  
+  # AI 服务
+  - DOMAIN-SUFFIX,openai.com,🔍 搜索学习
+  - DOMAIN-SUFFIX,chatgpt.com,🔍 搜索学习
+  - DOMAIN-SUFFIX,anthropic.com,🔍 搜索学习
+  - DOMAIN-SUFFIX,claude.ai,🔍 搜索学习
+  
+  # 下载服务
+  - DOMAIN-SUFFIX,github-releases.githubusercontent.com,⚡ 高速下载
+  - DOMAIN-SUFFIX,objects.githubusercontent.com,⚡ 高速下载
+  - DOMAIN-SUFFIX,raw.githubusercontent.com,⚡ 高速下载
+  
+  # 游戏平台
+  - DOMAIN-SUFFIX,steampowered.com,⚡ 高速下载
+  - DOMAIN-SUFFIX,steamcommunity.com,⚡ 高速下载
+  - DOMAIN-SUFFIX,epicgames.com,⚡ 高速下载
+  
+  # GEOIP 规则
+  - GEOIP,CN,DIRECT
+  - GEOIP,PRIVATE,DIRECT
+  
+  # 最终规则
+  - MATCH,🚀 自动选择
+
+# ==================== 节点选择器 ====================
+proxy-providers:
+  ALL_PROXIES:
+    type: file
+    path: ./proxies.yaml
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
